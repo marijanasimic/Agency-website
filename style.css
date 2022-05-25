@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Ubuntu:400,700&display=swap");
+:root {
+  --white: #fff;
+  --orange: rgb(255, 138, 91);
+  --gray: #555;
+  --moka: #fceade;
+  --black: #000;
+  --transition: 0.4s ease;
+  --bodyFont: "Roboto", sans-serif;
+  --headings: "Ubuntu", sans-serif;
+}
+/***************
+basic styles
+***************/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--bodyFont);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--headings);
+}
+.py-5 {
+  padding: 100px 0 !important;
+}
+.titleText h2 {
+  color: var(--orange);
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+/* nav */
+.navbar {
+  border-top: 6px solid var(--orange);
+  background: var(--black);
+  padding: 0;
+  z-index: 100;
+}
+.sticky {
+  position: fixed;
+  width: 100%;
+  background: var(--white);
+}
+.navbar-brand {
+  background: var(--orange);
+  padding: 15px 40px;
+  font-style: italic;
+  color: var(--white);
+  font-size: 1.7rem;
+  transition: var(--transition);
+}
+.navbar-brand:hover {
+  color: var(--black);
+}
+.navbar .nav-link {
+  color: lightgray;
+  font-size: 20px;
+  margin: 0 10px;
+}
+.navbar .nav-link:hover {
+  color: var(--orange);
+}
+
+/* baner */
+#baner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.99)),
+    url(img/banner.jpg);
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+#baner .row {
+  height: 80vh;
+}
+#baner .btnLink {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 15px 25px;
+  border: 2px solid var(--orange);
+  background: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 0;
+}
+#baner .btnLink:hover {
+  background: var(--orange);
+  color: var(--black);
+}
+/* about */
+#about {
+  padding: 50px 0;
+}
+#about img {
+  border-radius: 5px;
+  height: 455px;
+}
+#about .card-header {
+  border: none;
+}
+#about .btn-link {
+  color: var(--black);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+#about .btn-link:hover {
+  color: var(--orange);
+}
+#about .card {
+  border: 1px solid lightgray;
+}
+.card-header i {
+  color: var(--gray);
+}
+
+/* services */
+#services {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(img/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#services i {
+  background: transparent;
+  padding: 30px;
+  font-size: 2rem;
+  color: var(--orange);
+  transition: var(--transition);
+  border-radius: 50%;
+}
+#services i:hover {
+  color: var(--white);
+}
+
+/* people */
+#people .carousel-caption {
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* projects */
+#projects {
+  padding: 50px 0;
+}
+#projects .col-lg-3 {
+  padding: 0;
+}
+#projects .imgContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  position: relative;
+  overflow: hidden;
+}
+#projects .imgContainer:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+#projects .titleText {
+  margin-left: 100px;
+}
+#projects .imgIcons {
+  position: absolute;
+  bottom: -10rem;
+  padding: 30px 0;
+  width: 100%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.7)
+  );
+  transition: bottom 1.5s;
+}
+#projects .imgContainer:hover .imgIcons {
+  bottom: 0;
+}
+#projects i {
+  color: var(--orange);
+  font-size: 35px;
+  margin: 0 10px;
+  transition: var(--transition);
+}
+#project i:hover {
+  color: var(--black);
+}
+
+/* team */
+#team .card img {
+  width: 80%;
+  margin: -100px auto 0 auto;
+  border-radius: 50%;
+}
+#team .row:nth-child(2) {
+  margin-top: 150px;
+}
+#team hr {
+  background: var(--orange);
+}
+#team i {
+  color: var(--gray);
+  font-size: 30px;
+  transition: var(--transition);
+}
+#team i:hover {
+  color: var(--orange);
+}
+
+/* skills */
+#skills {
+  background: linear-gradient(rgba(255, 138, 91, 0.8), rgba(255, 138, 91, 0.8)),
+    url(img/about-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+  padding: 150px 0;
+}
+#skills .progress {
+  height: 3px;
+}
+#skills .progress-bar {
+  background: var(--black);
+}
+#skils .single-progress {
+  margin-bottom: 15px;
+}
+
+/* pricing */
+#pricing .card {
+  border-radius: 0;
+  opacity: 0.7;
+}
+#pricing .card-title {
+  padding-top: 20px;
+}
+.priceNum {
+  position: relative;
+  /* background: var(--moka); */
+  padding: 10px 0;
+}
+.money {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  font-size: 25px;
+}
+.moneyNum {
+  font-size: 60px;
+}
+.moneyEnd {
+  font-size: 20px;
+}
+#pricing .list-group-item {
+  font-size: 12px;
+}
+.pricingBtn {
+  background: var(--black);
+  border-radius: 0;
+  color: var(--white);
+}
+.pricingBtn:hover {
+  background: var(--black);
+  color: var(--orange);
+}
+#pricing .col-lg-3:last-child .priceNum {
+  color: var(--orange);
+}
+#pricing .list-group li:first-child {
+  border-top: none;
+  padding-top: 30px;
+}
+#pricing .list-group-item:first-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#pricing .list-group-item:last-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* contact */
+#contact {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(img/progress.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 70vh;
+  text-align: right;
+}
+#contact .row {
+  height: 60vh;
+}
+#contact h2 {
+  font-size: 3rem;
+  color: var(--black);
+}
+#contact h4 {
+  color: var(--black);
+}
+#contact input {
+  background: var(--white);
+  border-bottom: 3px solid var(--white);
+  width: 36%;
+  font-size: 1.5rem;
+  margin-right: 30px;
+  position: relative;
+  left: 30px;
+}
+#contact .formBtn {
+  background: var(--orange);
+  border: 3px solid var(--orange);
+  border-radius: 0;
+  font-size: 1rem;
+  color: var(--black);
+}
+::placeholder {
+  color: var(--moka);
+}
+
+/* footer */
+footer {
+  background: var(--black);
+  color: white;
+}
+footer h2,
+footer i {
+  color: var(--orange);
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #team .card img {
+    margin: 20px auto;
+  }
+}
